@@ -59,3 +59,43 @@ class _HomePageState extends State<HomePage> {
 ```
 ### Расчитанный ИМТ, на основе данных с ввода
 ![two](https://github.com/gabdulkaliev/Project2_Flutter/blob/main/two.png)
+### Главная логика страницы конфигурации, для смены цветовой гаммы и темы
+```java
+class _ConfigPageState extends State<ConfigPage> {
+  int _corApp = AppThemeController.instance.numberColor;
+
+  Widget a(int index){
+    Color color;
+    if(index == 0){
+      color = Colors.purple;
+    }
+    else if(index == 1){
+      color = Colors.blue;
+    }
+    else if(index == 2){
+      color = Colors.green;
+    }
+    else if(index == 3){
+      color = Colors.red;
+    }
+    else{
+      color = Colors.yellow;
+    }
+    return Radio(
+      activeColor: color,
+      value: index, 
+      groupValue: AppThemeController.instance.numberColor, 
+      onChanged: (int? value){
+        if(value != null) {
+          setState(() {
+            _corApp = value;
+            AppThemeController.instance.changeColor(color, index);
+          });
+        }
+      }
+    );
+  }
+```
+### Страница конфигурации
+![tree](https://github.com/gabdulkaliev/Project2_Flutter/blob/main/three.png)
+![four](https://github.com/gabdulkaliev/Project2_Flutter/blob/main/four.png)
