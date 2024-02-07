@@ -1,7 +1,7 @@
 ## BMI Калькулятор написанный на Flutter. 
 Одна из простейших программ для высчитывания Индекса массы тела 
 Далее идет основной класс приложения 
-```java
+```dart
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 ![one](https://github.com/gabdulkaliev/Project2_Flutter/blob/main/one.png)
 ___
 ### Класс `_HomePageState` и функция `calcIMC` для расчета ИМТ
-```java
+```dart
 class _HomePageState extends State<HomePage> {
   final scrollControllerScreen = ScrollController();
   final TextEditingController altura = TextEditingController();
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
 ### Расчитанный ИМТ, на основе данных с ввода
 ![two](https://github.com/gabdulkaliev/Project2_Flutter/blob/main/two.png)
 ### Главная логика страницы конфигурации, для смены цветовой гаммы и темы
-```java
+```dart
 class _ConfigPageState extends State<ConfigPage> {
   int _corApp = AppThemeController.instance.numberColor;
 
